@@ -21,8 +21,8 @@ public interface ProductBrowser {
     Collection<Product> getByPriceRange(double minimumPrice, double maximumPrice);
 
     Map<String, List<Product>> groupByName();
-    Map<Color, List<Product>> groupByColor();
-    Map<Season, List<Product>> groupBySeason();
+    Map<String, List<Product>> groupByColor();
+    Map<String, List<Product>> groupBySeason();
     Map<PriceRange, List<Product>> groupByPriceRange();
 
     Collection<Product> orderByName();
