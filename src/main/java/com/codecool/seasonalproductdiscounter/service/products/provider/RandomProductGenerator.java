@@ -27,22 +27,32 @@ public class RandomProductGenerator implements ProductProvider {
     }
 
     private List<Product> generateRandomProducts(int count, double minimumPrice, double maximumPrice) {
-        return null;
+    List<Product> products = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            Color color = getRandomColor();
+            String name = getRandomName(color);
+            Season season = getRandomSeason();
+            double price = getRandomPrice(minimumPrice,maximumPrice);
+            Product product = new Product(i + 1, name, color,season,price);
+            products.add(product);
+        }
+        return products;
     }
 
     private Color getRandomColor() {
-        return null;
+        return COLORS[RANDOM.nextInt(COLORS.length)];
     }
 
     private String getRandomName(Color color) {
-        return null;
+        String type = NAMES[RANDOM.nextInt(NAMES.length)];
+        return color.name() + " " + type;
     }
 
     private Season getRandomSeason() {
-        return null;
+        return SEASONS[RANDOM.nextInt(SEASONS.length)];
     }
 
     private double getRandomPrice(double minimumPrice, double maximumPrice) {
-        return 0;
+        return minimumPrice + (maximumPrice - minimumPrice) * RANDOM.nextDouble();
     }
 }
