@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ProductBrowserImplementationTest {
     private ProductBrowser productBrowser;

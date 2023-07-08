@@ -13,7 +13,7 @@ public class Application {
         ProductStatistics productStatistics = null;
 
         var productsUi = new ProductsUi(productBrowser);
-        var statisticsUi = new StatisticsUi(productStatistics);
+        //var statisticsUi = new StatisticsUi(productStatistics);
 
         productsUi.run();
     }
